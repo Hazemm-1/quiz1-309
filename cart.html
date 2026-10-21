@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="cart.html">Cart</a>
+  </header>
+
+  <main>
+    <section id="cart-display">
+      <h1>Add and display products</h1>
+      <p class="subtitle">Add your products.</p>
+
+      <form id="product-form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Product name">
+          <p class="error" id="name-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="">Choose a category</option>
+            <option value="men">men</option>
+            <option value="women">women</option>
+            <option value="children">children</option>
+          </select>
+          <p class="error" id="category-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="price">Price</label>
+          <input type="number" id="price" placeholder="Price" step="0.01" min="0">
+          <p class="error" id="price-error" aria-live="polite"></p>
+        </div>
+
+        <button type="submit">Add product</button>
+      </form>
+
+      <h2>Products</h2>
+      <ul id="product-list"></ul>
+      <p id="total">Total: 0</p>
+    </section>
+  </main>
+
+  <script src="cart.js"></script>
+</body>
+</html>
